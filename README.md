@@ -1,55 +1,62 @@
-# Spam Classifier
+# 📧 Spam Classifier (AI Python Capstone Project)
 
-[![Python Tests](https://github.com/OWNER/REPO/actions/workflows/python-tests.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/python-tests.yml) [![Tests Status](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/OWNER/REPO/actions/workflows/python-tests.yml)
+## 📌 Project Overview
+This project is a Machine Learning–based **Spam vs Not Spam text classifier** built using Python.  
+It analyzes SMS/email messages and predicts whether a message is **Spam** or **Ham (Not Spam)**.
 
-Small spam classifier example using TF-IDF + MultinomialNB.
+This project is developed as a **capstone project** to demonstrate practical AI/ML skills using Python.
 
-> Tip: Replace `OWNER/REPO` in the GitHub Actions badge URL with your GitHub repository owner/name to enable a dynamic status badge.
+---
 
-## Setup
+## 🎯 Problem Statement
+Spam messages cause:
+- Loss of time
+- Security risks
+- Poor user experience
 
-Create a virtual environment and install dependencies:
+The goal is to automatically classify messages using **Natural Language Processing (NLP)** and **Machine Learning**.
 
-```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
+---
 
-## Train
+## 🧠 Solution Approach
+1. Collect labeled spam dataset
+2. Clean and preprocess text data
+3. Convert text into numerical features using **TF-IDF**
+4. Train a **Machine Learning model**
+5. Evaluate accuracy and performance
+6. Predict spam or non-spam messages
 
-Train a model using the default data file (`data/spam.csv`):
+---
 
-```powershell
-python -m src.train
-```
+## 🛠️ Technologies Used
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Joblib
+- VS Code
+- Git & GitHub
 
-Or provide a custom dataset path and artifact outputs in Python:
 
-```python
-from src import train
-train.train('data/spam.csv', model_out='models/spam_model.pkl', vectorizer_out='models/vectorizer.pkl')
-```
+---
 
-## Predict
+## 📊 Dataset
+- **SMS Spam Collection Dataset**
+- Messages labeled as:
+  - `spam`
+  - `ham`
 
-Use the CLI to predict one or more texts:
+---
 
-```powershell
-python -m src.predict -t "You won a prize" "hello friend"
-```
+## 🚀 How to Run the Project
 
-Or call `predict.predict([...])` from Python code.
+### 1️⃣ Create virtual environment
+```bash
+python -m venv .venv
+.venv\Scripts\activate
 
-## Tests
 
-Run tests with `pytest`:
+---
 
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-```
-
-## Notes
-
-- Default data file is `data/spam.csv`. The loader will attempt common column names (`text`, `message`, `v2`, etc.).
-- Artifacts are saved to the `models/` directory by default.
+## 📂 Project Structure
